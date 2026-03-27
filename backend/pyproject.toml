@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mindwise-backend"
+version = "0.1.0"
+description = "MindWise AI video generation platform backend"
+requires-python = ">=3.11"
+dependencies = [
+  "alembic>=1.14.1",
+  "celery[redis]>=5.4.0",
+  "fastapi>=0.115.12",
+  "httpx>=0.28.1",
+  "pydantic-settings>=2.8.1",
+  "pymysql>=1.1.1",
+  "python-multipart>=0.0.20",
+  "sqlalchemy>=2.0.39",
+  "sympy>=1.13.3",
+  "uvicorn[standard]>=0.34.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.5",
+  "pytest-asyncio>=0.26.0",
+  "pytest-cov>=6.0.0",
+  "respx>=0.22.0",
+]
+render = [
+  "manim>=0.18.1",
+  "matplotlib>=3.10.1",
+  "numpy>=2.2.4",
+  "pillow>=11.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

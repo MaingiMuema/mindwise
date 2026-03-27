@@ -1,0 +1,23 @@
+[
+  {
+    "id": "math-proof-longform",
+    "title": "Mathematics Proof Walkthrough",
+    "duration_minutes": 12,
+    "visual_style": "clean_academic",
+    "prompt": "Explain a mathematical proof with intuition, derivation, and graphical support."
+  },
+  {
+    "id": "systems-explainer",
+    "title": "Distributed Systems Explainer",
+    "duration_minutes": 9,
+    "visual_style": "cinematic_technical",
+    "prompt": "Explain a distributed systems concept using process flows, comparisons, and failure scenarios."
+  },
+  {
+    "id": "startup-product-story",
+    "title": "Product Architecture Story",
+    "duration_minutes": 6,
+    "visual_style": "startup_explainer",
+    "prompt": "Explain a product or startup system with modern infographic visuals and icon-driven scenes."
+  }
+]
